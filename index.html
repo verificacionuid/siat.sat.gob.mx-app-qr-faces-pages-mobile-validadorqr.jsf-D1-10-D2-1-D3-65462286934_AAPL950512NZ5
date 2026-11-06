@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <title>Consulta de Información - SAT</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #f7f4ee 0%, #ded7cc 100%);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px 10px;
+            color: #2b2b2b;
+            min-height: 100vh;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .container {
+            max-width: 780px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Contenedor del Logo Superior */
+        .header-logo-box {
+            background: #ffffff;
+            border: 1px solid #b8a690;
+            border-radius: 4px;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-logo-box img {
+            max-width: 380px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Caja de Aviso / Alerta con sombra inferior */
+        .alert-box {
+            background: linear-gradient(to bottom, #fdfcfa 0%, #efe7dc 100%);
+            border: 1px solid #b89b72;
+            border-radius: 4px;
+            padding: 12px 16px;
+            margin-bottom: 22px;
+            font-size: 0.93rem;
+            color: #333333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Paneles de Secciones con la sombra inferior característica */
+        .sat-panel {
+            background-color: #fbf9f5;
+            border: 1px solid #b89b72;
+            border-radius: 4px;
+            margin-bottom: 22px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        .sat-panel-header {
+            background: linear-gradient(to bottom, #d6be96 0%, #a17f4e 100%);
+            color: #ffffff;
+            padding: 8px 14px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.25);
+            border-bottom: 1px solid #8c6a3c;
+        }
+
+        .sat-panel-body {
+            padding: 16px 20px;
+        }
+
+        /* Tablas de Información */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table td {
+            padding: 5px 8px;
+            font-size: 0.9rem;
+        }
+
+        .data-label {
+            text-align: right;
+            font-weight: bold;
+            width: 42%;
+            color: #2b2b2b;
+            padding-right: 15px;
+        }
+
+        .data-value {
+            text-align: left;
+            color: #1a1a1a;
+        }
+
+        /* Adaptabilidad para Celulares y Zoom Fluido */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px 5px;
+            }
+            .sat-panel-body {
+                padding: 12px 14px;
+            }
+            .data-table, .data-table tbody, .data-table tr, .data-table td {
+                display: block;
+                width: 100%;
+                text-align: left !important;
+            }
+            .data-label {
+                text-align: left !important;
+                padding-bottom: 2px;
+                padding-right: 0;
+                color: #5e4c32;
+            }
+            .data-value {
+                padding-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- LOGO SUPERIOR -->
+        <div class="header-logo-box">
+            <img src="logo.png" alt="Hacienda y SAT" />
+        </div>
+
+        <!-- AVISO SUPERIOR -->
+        <div class="alert-box">
+            El RFC: <strong>AAPL950512NZ5 </strong>, tiene asociada la siguiente información.
+        </div>
+
+        <!-- 1. DATOS DE IDENTIFICACIÓN -->
+        <div class="sat-panel">
+            <div class="sat-panel-header">Datos de Identificación</div>
+            <div class="sat-panel-body">
+                <table class="data-table">
+                    <tr>
+                        <td class="data-label">CURP:</td>
+                        <td class="data-value">AAPL950512MJCLDZ09</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Nombre:</td>
+                        <td class="data-value">LUZ ELENA </td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Apellido Paterno:</td>
+                        <td class="data-value">DE ALBA</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Apellido Materno:</td>
+                        <td class="data-value">PADILLA</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Fecha Nacimiento:</td>
+                        <td class="data-value">12-05-1995</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Fecha de Inicio de operaciones:</td>
+                        <td class="data-value">20-11-2023</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Situación del contribuyente:</td>
+                        <td class="data-value">ACTIVO</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Fecha del último cambio de situación:</td>
+                        <td class="data-value">20-11-2023</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 2. DATOS DE UBICACIÓN -->
+        <div class="sat-panel">
+            <div class="sat-panel-header">Datos de Ubicación (domicilio fiscal, vigente)</div>
+            <div class="sat-panel-body">
+                <table class="data-table">
+                    <tr>
+                        <td class="data-label">Entidad Federativa:</td>
+                        <td class="data-value">JALISCO</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Municipio o delegación:</td>
+                        <td class="data-value">ACATIC</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Colonia:</td>
+                        <td class="data-value">RANCHO LAS MOTAS</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Tipo de vialidad:</td>
+                        <td class="data-value">CAMINO</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Nombre de la vialidad:</td>
+                        <td class="data-value">RANCHO LAS MOTAS</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Número exterior:</td>
+                        <td class="data-value">340 B</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Número interior:</td>
+                        <td class="data-value"></td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">CP:</td>
+                        <td class="data-value">47600</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">AL:</td>
+                        <td class="data-value">JALISCO</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 3. CARACTERÍSTICAS FISCALES -->
+        <div class="sat-panel">
+            <div class="sat-panel-header">Características fiscales (vigente)</div>
+            <div class="sat-panel-body">
+                <table class="data-table">
+                    <tr>
+                        <td class="data-label">Régimen:</td>
+                        <td class="data-value">Persona física con actividades empresariales</td>
+                    </tr>
+                    <tr>
+                        <td class="data-label">Fecha de alta:</td>
+                        <td class="data-value">20-11-2023</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
